@@ -1,4 +1,4 @@
-package com.soumya.miscellaneous.com.soumya.variance
+package com.soumya.variance
 
 abstract class Vehicle{
   val name:String
@@ -8,7 +8,7 @@ case class Bike(name: String) extends Vehicle
 
 case class ParkingTicket[+T](vehicle: T, price: Int)
 
-object ContraVariance extends App {
+object Covariance extends App {
 
   def parkMyVehicle(p : ParkingTicket[Vehicle]): Unit = println(s"Parking your ${p.vehicle.name}")
 
